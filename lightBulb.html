@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+</head>
+<body>
+    <div class="w-100 d-flex justify-content-center align-items-center flex-column flex-md-row">
+        <img src="./images/pic_bulboff.gif" alt="" width="250px" height="350px" id="bulbState" class="img-fluid mt-2">
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <button onclick="bulb()" id="switchControl" class="btn btn-outline-success mt-2 ms-md-4 rounded-5" style="height: 50px; width: 100px;">ON</button>
+            <div class="mt-2 ms-md-4" id="nepaStatus" style="height: 150px; width: 400px; text-align: center; font-size: 2.5rem;">
+                <em style="font-size: 1.5rem;">
+                    Click button to change bulb status
+                </em> 
+            </div> 
+        </div>    
+    </div>
+    
+
+    <script>
+        var state = true;
+        function bulb() {
+            if (state == true){
+                bulbState.src = "./images/pic_bulbon.gif";
+                switchControl.innerText = "OFF";
+                state = false;
+                nepaStatus.innerText = "UP NEPA!";
+            }
+            else {
+                bulbState.src = "./images/pic_bulboff.gif";
+                switchControl.innerText = "ON";
+                state = true;
+                nepaStatus.innerText = "";
+            }
+        }
+    </script>
+</body>
+</html>
